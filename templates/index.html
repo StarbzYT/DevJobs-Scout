@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<h1>DevJobs Scout</h1>
+
+<form action="action={{ url_for("home")}}" method="post">
+  <label for="location">Where do you want to find a dev job?</label><br>
+  <input type="text" id="location" name="location" placeholder="Enter a location"><br>
+  <label for="lname">What type of dev job are you interested in?</label><br>
+  <input type="text" id="job_type" name="job_type" placeholder="Enter job type"><br><br>
+  <input type="submit" value="Find Jobs">
+</form> 
+
+</body>
+</html>
