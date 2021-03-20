@@ -5,12 +5,14 @@ import auth  # custom module
 
 
 class Jobs:
-    location = ""  # user location
-    description = ""  # user description (type of developer)
+    location = ""
+    description = ""
     URL = "https://jobs.github.com/positions"  # base url for API
     jobs_data = []  # json data
 
     def _jobs_api(self):  # get json data (jobs)
+        location = input("Where would you like to become a developer? \U0001f607\n")  # location parameter
+        description = input("What type of developer are you interested in becoming? \U0001f608\n")  # search term
         response = requests.get(Jobs.URL,
                                 headers={"Accept": "application/json"},
                                 params={"location": location, "description": description}  # query params
@@ -53,7 +55,6 @@ class Jobs:
         else:
             print(f"Sorry, I could not find any {Jobs.description} jobs in {Jobs.location} for you... \U0001f605")
 
-# only run if this file is called
 if __name__ == '__main__':
     user = Jobs()
     # user.send_jobs()
