@@ -4,7 +4,7 @@
 
 ## **About**
 
-This is a **DevJobs Web Application** made with *Python* (_flask framework_), **HTML** and **CSS** that allows the user to:
+This is a **DevJobs Web Application** made with **Python** (_flask framework_), **HTML** and **CSS** that allows the user to:
 
 > - _**Search**_ for a location and type of dev job they are interested in
 > - _**Receive**_ an email if jobs in the specified location were found
