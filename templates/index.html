@@ -4,17 +4,10 @@
 <style>
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.alert {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  text-align: center;
-  width: 48.5%;
-  padding: 15px;
-  background-color: #fab616;
-  color: white;
 }
 
 .closebtn {
@@ -34,7 +27,7 @@ body {
 input[type=text], select {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
-  width: 50%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -45,7 +38,7 @@ input[type=text], select {
 
 input[type=submit] {
   font-size: 20px;
-  width: 50%;
+  width: 100%;
   background-color: #3273ec;
   color: white;
   padding: 14px 20px;
@@ -61,7 +54,7 @@ input[type=submit]:hover {
 
 h1 {
   font-size: 72px;
-  background: -webkit-linear-gradient(rgb(82, 157, 255), rgb(3, 78, 163));
+  background: -webkit-linear-gradient(rgb(75, 153, 255), rgb(10, 99, 200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -70,25 +63,19 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
 </style>
 </head>
 <body>
+  <h1>DevJobs Scout</h1>
 
-<h1>DevJobs Scout</h1>
-
-<form action="{{ url_for("home")}}" method="post">
-  <label for="location">Where do you want to find a dev job?</label><br>
-  <input type="text" id="location" name="location" placeholder="Enter a location"><br>
-  <label for="lname">What type of dev job are you interested in?</label><br>
-  <input type="text" id="job_type" name="job_type" placeholder="Enter job type"><br><br>
-  <input type="submit" value="Find Jobs">
-</form> 
-
-<p>Click on the "x" symbol to close the alert message.</p>
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Sorry,</strong> I could not find any jobs for you...
-</div>
+  <form action="{{ url_for("home")}}" method="post">
+    <label for="location">Where do you want to find a dev job?</label><br>
+    <input type="text" id="location" name="location" placeholder="Enter a location"><br>
+    <label for="lname">What type of dev job are you interested in?</label><br>
+    <input type="text" id="job_type" name="job_type" placeholder="Enter job type"><br><br>
+    <input type="submit" value="Find Jobs">
+  </form> 
 
 </body>
 </html>
